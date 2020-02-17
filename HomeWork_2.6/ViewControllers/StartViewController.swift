@@ -11,9 +11,9 @@ import UIKit
 class StartViewController: UIViewController {
     
     //MARK: - Public properties
-     var redSliderValue: Float!
-     var greenSliderValue: Float!
-     var blueSliderValue: Float!
+    var redSliderValue = Float.random(in: 0.0..<1.0)
+     var greenSliderValue = Float.random(in: 0.0..<1.0)
+     var blueSliderValue = Float.random(in: 0.0..<1.0)
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -23,9 +23,9 @@ class StartViewController: UIViewController {
         
         colorSettingVC.colorValue = view.backgroundColor
         
-        colorSettingVC.setupRedSliderValue = redSliderValue ?? 0.5
-        colorSettingVC.setupGreenSliderValue = greenSliderValue ?? 0.5
-        colorSettingVC.setupBlueSliderValue = blueSliderValue ?? 0.5
+        colorSettingVC.setupRedSliderValue = redSliderValue
+        colorSettingVC.setupGreenSliderValue = greenSliderValue
+        colorSettingVC.setupBlueSliderValue = blueSliderValue
     }
  
 }
@@ -39,7 +39,7 @@ extension StartViewController: ColorSettingDelegate {
         blueSliderValue = blue
     }
     
-    func changeViewColor(_ colorValue: UIColor) {
+    func changeViewColor(to colorValue: UIColor) {
         view.backgroundColor = colorValue
     }
   

@@ -19,7 +19,7 @@ protocol ColorSettingProtocol {
 
 protocol ColorSettingDelegate {
     
-    func changeViewColor(_ colorValue: UIColor)
+    func changeViewColor(to colorValue: UIColor)
     func changeSliderValu( red: Float, green: Float, blue: Float)
 }
 
