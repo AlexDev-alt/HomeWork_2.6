@@ -9,16 +9,10 @@
 import UIKit
 
 protocol ColorSettingProtocol {
-    
     var colorSetting: UIColor { get }
-    
-    var redSliderValue: Float { get }
-    var greenSliderValue: Float { get }
-    var blueSliderValue: Float { get }
 }
 
 protocol ColorSettingDelegate {
-    
     func changeViewColor(to colorValue: UIColor)
     func changeSliderValu( red: Float, green: Float, blue: Float)
 }

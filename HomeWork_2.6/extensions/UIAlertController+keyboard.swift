@@ -9,7 +9,7 @@
 import UIKit
 
 extension ViewController {
-    
+    //Add Done Button
     func addDoneButtonTo(_ textField: UITextField) {
            
            let keyboardToolbar = UIToolbar()
@@ -33,7 +33,7 @@ extension ViewController {
            view.endEditing(true)
        }
        
-       //MARK: - UIAlertController
+       //UIAlertController
          func showAlert() {
             
             let alert = UIAlertController(title: "😱", message: "wrong format", preferredStyle: .alert)

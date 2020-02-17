@@ -163,7 +163,7 @@
                                     <color key="titleColor" red="0.96730863109999998" green="1" blue="0.81215524110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNE-Bp-F0r"/>
+                                    <action selector="backButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wNE-Bp-F0r"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-KX-Rpk">

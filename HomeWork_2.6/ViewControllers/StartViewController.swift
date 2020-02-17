@@ -20,7 +20,6 @@ class StartViewController: UIViewController {
 
         let colorSettingVC = segue.destination as! ViewController
         colorSettingVC.delegate = self
-        
         colorSettingVC.colorValue = view.backgroundColor
         
         colorSettingVC.setupRedSliderValue = redSliderValue

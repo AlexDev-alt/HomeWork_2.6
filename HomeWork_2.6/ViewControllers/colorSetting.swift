@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, ColorSettingProtocol {
+class ViewController: UIViewController {
     
     //MARK: - Public properties
     //сюда передаю значения view.background из StartViewController
@@ -30,11 +30,6 @@ class ViewController: UIViewController, ColorSettingProtocol {
             alpha: 1
         )
     }
-    
-    //свойства протокола в которых значения текущего вью, которые передаю в StartViewController
-    var redSliderValue: Float { redSlider.value }
-    var greenSliderValue: Float { greenSlider.value }
-    var blueSliderValue: Float { blueSlider.value }
     
     //MARK: - Public properties
     private let animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear)
@@ -157,6 +152,7 @@ class ViewController: UIViewController, ColorSettingProtocol {
     private func setColor() {
         setValueLabels()
         setValueTextFields()
+        setSliderValue()
         
         colorView.backgroundColor = UIColor(
             red:CGFloat(redSlider.value),
@@ -166,18 +162,22 @@ class ViewController: UIViewController, ColorSettingProtocol {
         )
     }
     
+    private func setSliderValue() {
+        setupRedSliderValue = redSlider.value
+        setupGreenSliderValue = greenSlider.value
+        setupBlueSliderValue = blueSlider.value
+    }
+    
     private func setValueLabels() {
         redLabel.text = string(redSlider)
         greenLabel.text = string(greenSlider)
         blueLabel.text = string(blueSlider)
-        
     }
     
     private func setValueTextFields() {
         redTextField.text = string(redSlider)
         greenTextField.text = string(greenSlider)
         blueTextField.text = string(blueSlider)
-        
     }
     
     private func string(_ slider: UISlider) -> String {
@@ -204,14 +204,14 @@ class ViewController: UIViewController, ColorSettingProtocol {
         }
     }
     
-    @IBAction func backPressed(_ sender: Any) {
+    @IBAction func backButtonPressed(_ sender: Any) {
         animator.stopAnimation(true)
         
         delegate.changeViewColor(to: colorSetting)
-        
-        delegate.changeSliderValu(red: redSliderValue,
-                                  green: greenSliderValue,
-                                  blue: blueSliderValue)
+
+        delegate.changeSliderValu(red: setupRedSliderValue,
+                                      green: setupGreenSliderValue,
+                                      blue: setupBlueSliderValue)
         
         dismiss(animated: true)
     }
