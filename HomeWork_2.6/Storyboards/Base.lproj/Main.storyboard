@@ -41,7 +41,8 @@
                                 <rect key="frame" x="40" y="50" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="zEf-He-ieH"/>
+                                    <constraint firstAttribute="height" constant="128" id="DPx-JV-RLk"/>
+                                    <constraint firstAttribute="width" constant="240" id="Hy2-Us-Wbs"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="W0Q-7s-mbW">
@@ -191,13 +192,12 @@
                             <constraint firstItem="qQb-KX-Rpk" firstAttribute="top" secondItem="Dup-28-UlC" secondAttribute="bottom" constant="20" id="04a-vk-yvD"/>
                             <constraint firstItem="Dup-28-UlC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3bS-Yh-1jb"/>
                             <constraint firstItem="W0Q-7s-mbW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="66p-JU-g3l"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UL5-U3-yey" secondAttribute="trailing" constant="40" id="GXS-fL-Ouf"/>
+                            <constraint firstItem="UL5-U3-yey" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FLR-Rn-fZe"/>
                             <constraint firstItem="qQb-KX-Rpk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="HJg-yv-VlV"/>
                             <constraint firstItem="W0Q-7s-mbW" firstAttribute="top" secondItem="UL5-U3-yey" secondAttribute="bottom" constant="20" id="acr-Kr-LW7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qQb-KX-Rpk" secondAttribute="trailing" constant="16" id="eB3-1a-GcS"/>
+                            <constraint firstItem="qQb-KX-Rpk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dtA-kg-sJC"/>
                             <constraint firstItem="UL5-U3-yey" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="gTV-uZ-r2I"/>
                             <constraint firstItem="Dup-28-UlC" firstAttribute="top" secondItem="W0Q-7s-mbW" secondAttribute="bottom" constant="20" id="kAS-2R-m4k"/>
-                            <constraint firstItem="UL5-U3-yey" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nfp-Z8-etM"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="W0Q-7s-mbW" secondAttribute="trailing" constant="8" id="uJn-Lk-uK1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -215,6 +215,7 @@
                         <outlet property="blueTextField" destination="dqk-D7-Hye" id="w6O-T0-WSz"/>
                         <outlet property="buttonLabel" destination="Dup-28-UlC" id="lgs-Al-1Pq"/>
                         <outlet property="colorView" destination="UL5-U3-yey" id="IjF-mE-MLZ"/>
+                        <outlet property="colorViewCenterConstraint" destination="FLR-Rn-fZe" id="Gya-um-ZDC"/>
                         <outlet property="greenLabel" destination="UOE-ah-sOt" id="sQb-U2-m9Z"/>
                         <outlet property="greenSlider" destination="I5P-Ka-LDR" id="aCX-Jk-fI3"/>
                         <outlet property="greenTextField" destination="I6c-xS-KDd" id="t4k-UC-bfo"/>
@@ -223,6 +224,7 @@
                         <outlet property="redTextField" destination="6bE-gS-z3t" id="48a-ey-yxe"/>
                         <outlet property="secondSunImageView" destination="MYN-HV-tox" id="VCW-O4-lsu"/>
                         <outlet property="sunImageView" destination="ARD-8U-e0v" id="zJM-Wo-0X9"/>
+                        <outlet property="sunImageViewCenterConstraint" destination="dtA-kg-sJC" id="ZJI-Dw-CdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

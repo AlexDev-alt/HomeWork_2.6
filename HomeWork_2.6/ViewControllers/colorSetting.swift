@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         )
     }
     
-    //MARK: - Public properties
+    //MARK: - Private properties
     private let animator = UIViewPropertyAnimator(duration: 1.0, curve: .linear)
     
     //MARK: - IBOutlets
@@ -54,8 +54,31 @@ class ViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
+    @IBOutlet weak var sunImageViewCenterConstraint: NSLayoutConstraint!
+    @IBOutlet weak var colorViewCenterConstraint: NSLayoutConstraint!
+    
+
     
     //MARK: - Lifecycle
+    override func viewDidAppear(_ animated: Bool) {
+       super.viewDidAppear(animated)
+
+       colorViewCenterConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.5) { [weak self] in
+         self?.view.layoutIfNeeded()
+       }
+        
+        sunImageViewCenterConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.3,
+                       options: [],
+                       animations: { [weak self] in
+                        self?.view.layoutIfNeeded()
+          }, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -74,6 +97,13 @@ class ViewController: UIViewController {
         
         setupImageViewAnimator()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           sunImageViewCenterConstraint.constant -= view.bounds.width
+           colorViewCenterConstraint.constant -= view.bounds.width
+
+       }
     
     
     //MARK: - Private Methods
