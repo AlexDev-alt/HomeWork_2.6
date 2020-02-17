@@ -69,7 +69,7 @@ class ViewController: UIViewController, ColorSettingProtocol {
         changeColorView()
         
         textFieldSelfDelegate()
-        setSliderAndColorViewStartValue()
+        setSliderColorViewButtonStartValue()
         setValueLabels()
         setValueTextFields()
         
@@ -123,7 +123,7 @@ class ViewController: UIViewController, ColorSettingProtocol {
         colorView.layer.cornerRadius = 15
     }
     
-    private func setSliderAndColorViewStartValue() {
+    private func setSliderColorViewButtonStartValue() {
         redSlider.value = setupRedSliderValue
         greenSlider.value = setupGreenSliderValue
         blueSlider.value = setupBlueSliderValue
@@ -205,7 +205,6 @@ class ViewController: UIViewController, ColorSettingProtocol {
     }
     
     @IBAction func backPressed(_ sender: Any) {
-        //        animator.startAnimation()
         animator.stopAnimation(true)
         
         delegate.changeViewColor(to: colorSetting)

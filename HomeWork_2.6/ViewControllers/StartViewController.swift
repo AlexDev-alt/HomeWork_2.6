@@ -11,9 +11,9 @@ import UIKit
 class StartViewController: UIViewController {
     
     //MARK: - Public properties
-    var redSliderValue = Float.random(in: 0.0..<1.0)
-     var greenSliderValue = Float.random(in: 0.0..<1.0)
-     var blueSliderValue = Float.random(in: 0.0..<1.0)
+   private var redSliderValue = Float.random(in: 0.0..<1.0)
+   private var greenSliderValue = Float.random(in: 0.0..<1.0)
+   private var blueSliderValue = Float.random(in: 0.0..<1.0)
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
