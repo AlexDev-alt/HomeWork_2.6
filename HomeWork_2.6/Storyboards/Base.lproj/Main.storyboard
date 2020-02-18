@@ -168,7 +168,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="qQb-KX-Rpk">
-                                <rect key="frame" x="16" y="430" width="288" height="119"/>
+                                <rect key="frame" x="16" y="425" width="288" height="119"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ARD-8U-e0v">
                                         <rect key="frame" x="0.0" y="-0.5" width="120" height="119.5"/>
@@ -189,7 +189,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qQb-KX-Rpk" firstAttribute="top" secondItem="Dup-28-UlC" secondAttribute="bottom" constant="20" id="04a-vk-yvD"/>
+                            <constraint firstItem="qQb-KX-Rpk" firstAttribute="top" secondItem="Dup-28-UlC" secondAttribute="bottom" constant="15" id="04a-vk-yvD"/>
                             <constraint firstItem="Dup-28-UlC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3bS-Yh-1jb"/>
                             <constraint firstItem="W0Q-7s-mbW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="66p-JU-g3l"/>
                             <constraint firstItem="UL5-U3-yey" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FLR-Rn-fZe"/>

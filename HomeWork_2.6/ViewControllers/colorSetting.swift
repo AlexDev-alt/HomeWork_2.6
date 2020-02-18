@@ -62,21 +62,7 @@ class ViewController: UIViewController {
     //MARK: - Lifecycle
     override func viewDidAppear(_ animated: Bool) {
        super.viewDidAppear(animated)
-
-       colorViewCenterConstraint.constant = 0
-        
-        UIView.animate(withDuration: 0.5) { [weak self] in
-         self?.view.layoutIfNeeded()
-       }
-        
-        sunImageViewCenterConstraint.constant = 0
-        
-        UIView.animate(withDuration: 0.5,
-                       delay: 0.3,
-                       options: [],
-                       animations: { [weak self] in
-                        self?.view.layoutIfNeeded()
-          }, completion: nil)
+        setupImageViewAnimatorDidApear()
     }
     
     override func viewDidLoad() {
@@ -100,10 +86,10 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
+        
            sunImageViewCenterConstraint.constant -= view.bounds.width
            colorViewCenterConstraint.constant -= view.bounds.width
-
-       }
+    }
     
     
     //MARK: - Private Methods
@@ -113,6 +99,36 @@ class ViewController: UIViewController {
             self.sunImageView.transform = CGAffineTransform(rotationAngle: 10)
             self.secondSunImageView.transform = CGAffineTransform(rotationAngle: -10)
         }
+    }
+    
+    private func setupImageViewAnimatorDidApear() {
+        
+        let options: UIView.AnimationOptions = [.curveEaseInOut,
+                                                .repeat,
+                                                .autoreverse]
+        
+        UIView.animate(withDuration: 2.9,
+                       delay: 0,
+                       options: options,
+                       animations: { [weak self] in
+                        self?.colorView.frame.size.height *= 1.3
+                        self?.colorView.frame.size.width *= 1.3
+            }, completion: nil)
+        
+        colorViewCenterConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.7) { [weak self] in
+            self?.view.layoutIfNeeded()
+        }
+        
+        sunImageViewCenterConstraint.constant = 0
+        
+        UIView.animate(withDuration: 0.7,
+                       delay: 0.3,
+                       options: [.curveEaseInOut],
+                       animations: { [weak self] in
+                        self?.view.layoutIfNeeded()
+            }, completion: nil)
     }
     
     private func changeImageViewAndButtonColors() {
